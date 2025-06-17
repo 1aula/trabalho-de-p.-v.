@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Architect My Project</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background-color: #f4f4f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #123456;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .btn {
+      background-color: #123456;
+      color: white;
+      padding: 15px 25px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0d2f4b;
+    }
+
+    #visitor-options {
+      margin-top: 20px;
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      .btn {
+        width: 90%;
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Architect My Project</h1>
+    <p>Encontre ou compartilhe projetos de arquitetura</p>
+  </header>
+
+  <div class="container">
+    <h2>Escolha uma opção:</h2>
+    <button class="btn" onclick="alert('Cadastro de Arquiteto - em desenvolvimento')">Cadastro de Arquitetos</button>
+    <button class="btn" onclick="alert('Cadastro de Cliente - em desenvolvimento')">Cadastro de Clientes</button>
+    <button class="btn" onclick="mostrarOpcoesVisitante()">Entrar como Visitante</button>
+
+    <div id="visitor-options">
+      <h3>Você é:</h3>
+      <button class="btn" onclick="alert('Entrando como Cliente Visitante')">Cliente</button>
+      <button class="btn" onclick="alert('Entrando como Arquiteto Visitante')">Arquiteto</button>
+    </div>
+  </div>
+
+  <script>
+    function mostrarOpcoesVisitante() {
+      const opcoes = document.getElementById('visitor-options');
+      opcoes.style.display = opcoes.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+
+</body>
+</html>
+
