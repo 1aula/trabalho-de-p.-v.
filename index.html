@@ -1,96 +1,230 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Architect My Project</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Architect My Project - Bem-vindo(a)!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cor-primaria: #007bff; /* Azul padrão */
+            --azul-marinho: #001f3f; /* Azul Marinho para detalhes */
+            --cinza-claro: #f8f9fa;
+            --cinza-medio: #e9ecef;
+            --texto-escuro: #343a40;
+            --sombra-caixa: rgba(0, 0, 0, 0.1);
+        }
 
-    body {
-      margin: 0;
-      background-color: #f4f4f8;
-      color: #333;
-    }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--cinza-claro) 0%, var(--cinza-medio) 100%);
+            margin: 0;
+            color: var(--texto-escuro);
+        }
 
-    header {
-      background-color: #123456;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-    }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px var(--sombra-caixa);
+            text-align: center;
+            width: 450px;
+            max-width: 90%;
+            transition: transform 0.3s ease-in-out;
+        }
 
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
+        .container:hover {
+            transform: translateY(-5px);
+        }
 
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      text-align: center;
-    }
+        .logo {
+            margin-bottom: 30px;
+        }
 
-    .btn {
-      background-color: #123456;
-      color: white;
-      padding: 15px 25px;
-      margin: 10px;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
+        .logo img {
+            max-width: 180px; /* Ajuste o tamanho da sua logo */
+            height: auto;
+            border-radius: 8px; /* Borda levemente arredondada para a logo, se desejar */
+        }
 
-    .btn:hover {
-      background-color: #0d2f4b;
-    }
+        h1 {
+            color: var(--azul-marinho);
+            margin-bottom: 30px;
+            font-size: 2.2em;
+            font-weight: 700;
+        }
 
-    #visitor-options {
-      margin-top: 20px;
-      display: none;
-    }
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Espaço entre os botões */
+            margin-bottom: 30px;
+        }
 
-    @media (max-width: 600px) {
-      .btn {
-        width: 90%;
-        font-size: 18px;
-      }
-    }
-  </style>
+        .btn {
+            background-color: var(--azul-marinho);
+            color: white;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 31, 63, 0.2); /* Sombra mais intensa para botões */
+        }
+
+        .btn:hover {
+            background-color: #003366; /* Um azul marinho um pouco mais escuro */
+            transform: translateY(-2px);
+        }
+
+        .form-section {
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid var(--cinza-medio);
+            display: none; /* Escondido por padrão */
+            text-align: left;
+        }
+
+        .form-section h2 {
+            color: var(--azul-marinho);
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--texto-escuro);
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="password"],
+        .form-group input[type="email"] {
+            width: calc(100% - 22px); /* Considerando padding e borda */
+            padding: 12px;
+            border: 1px solid var(--cinza-medio);
+            border-radius: 6px;
+            font-size: 1em;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="password"]:focus,
+        .form-group input[type="email"]:focus {
+            border-color: var(--cor-primaria);
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+            outline: none;
+        }
+
+        .submit-btn {
+            background-color: #28a745; /* Um verde atraente para ação positiva */
+            color: white;
+            padding: 14px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 600;
+            width: 100%;
+            margin-top: 15px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+
+        .role-selection {
+            margin-top: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .role-selection .btn {
+            background-color: #6c757d; /* Um cinza neutro para seleção de papel */
+            color: white;
+            padding: 12px 20px;
+            font-size: 1em;
+            box-shadow: none; /* Sem sombra para estes botões menores */
+        }
+
+        .role-selection .btn:hover {
+            background-color: #5a6268;
+            transform: translateY(-1px);
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="My Architect My Project Logo">
+        </div>
+        <h1>My Architect My Project</h1>
+        <div class="btn-group">
+            <button class="btn" onclick="showSection('loginSection')">Login</button>
+            <button class="btn" onclick="showSection('registerOptionsSection')">Cadastro</button>
+        </div>
 
-  <header>
-    <h1>My Architect My Project</h1>
-    <p>Encontre ou compartilhe projetos de arquitetura</p>
-  </header>
+        <div id="loginSection" class="form-section">
+            <h2>Fazer Login</h2>
+            <form action="/login" method="POST"> <div class="form-group">
+                    <label for="loginEmail">Email ou Nome de Usuário:</label>
+                    <input type="text" id="loginEmail" name="loginEmail" required>
+                </div>
 
-  <div class="container">
-    <h2>Escolha uma opção:</h2>
-    <button class="btn" onclick="alert('Cadastro de Arquiteto - em desenvolvimento')">Cadastro de Arquitetos</button>
-    <button class="btn" onclick="alert('Cadastro de Cliente - em desenvolvimento')">Cadastro de Clientes</button>
-    <button class="btn" onclick="mostrarOpcoesVisitante()">Entrar como Visitante</button>
+                <div class="form-group">
+                    <label for="loginPassword">Senha:</label>
+                    <input type="password" id="loginPassword" name="loginPassword" required>
+                </div>
 
-    <div id="visitor-options">
-      <h3>Você é:</h3>
-      <button class="btn" onclick="alert('Entrando como Cliente Visitante')">Cliente</button>
-      <button class="btn" onclick="alert('Entrando como Arquiteto Visitante')">Arquiteto</button>
+                <button type="submit" class="submit-btn">Entrar</button>
+            </form>
+        </div>
+
+        <div id="registerOptionsSection" class="form-section">
+            <h2>Escolha seu Perfil</h2>
+            <div class="role-selection">
+                <button class="btn" onclick="redirectToRegister('cliente')">Sou Cliente</button>
+                <button class="btn" onclick="redirectToRegister('arquiteto')">Sou Arquiteto</button>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <script>
-    function mostrarOpcoesVisitante() {
-      const opcoes = document.getElementById('visitor-options');
-      opcoes.style.display = opcoes.style.display === 'none' ? 'block' : 'none';
-    }
-  </script>
+    <script>
+        function showSection(sectionId) {
+            // Esconde todas as seções de formulário
+            document.querySelectorAll('.form-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            // Mostra a seção desejada
+            document.getElementById(sectionId).style.display = 'block';
+        }
 
+        function redirectToRegister(role) {
+            // Redireciona para a página de cadastro, passando o tipo de usuário como parâmetro
+            window.location.href = 'cadastro.html?role=' + role;
+        }
+
+        // Opcional: mostrar a seção de login por padrão ao carregar a página
+        // document.addEventListener('DOMContentLoaded', () => {
+        //     showSection('loginSection');
+        // });
+    </script>
 </body>
 </html>
-
