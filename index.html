@@ -3,228 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Architect My Project - Bem-vindo(a)!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --cor-primaria: #007bff; /* Azul padrão */
-            --azul-marinho: #001f3f; /* Azul Marinho para detalhes */
-            --cinza-claro: #f8f9fa;
-            --cinza-medio: #e9ecef;
-            --texto-escuro: #343a40;
-            --sombra-caixa: rgba(0, 0, 0, 0.1);
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: linear-gradient(135deg, var(--cinza-claro) 0%, var(--cinza-medio) 100%);
-            margin: 0;
-            color: var(--texto-escuro);
-        }
-
-        .container {
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px var(--sombra-caixa);
-            text-align: center;
-            width: 450px;
-            max-width: 90%;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .container:hover {
-            transform: translateY(-5px);
-        }
-
-        .logo {
-            margin-bottom: 30px;
-        }
-
-        .logo img {
-            max-width: 180px; /* Ajuste o tamanho da sua logo */
-            height: auto;
-            border-radius: 8px; /* Borda levemente arredondada para a logo, se desejar */
-        }
-
-        h1 {
-            color: var(--azul-marinho);
-            margin-bottom: 30px;
-            font-size: 2.2em;
-            font-weight: 700;
-        }
-
-        .btn-group {
-            display: flex;
-            justify-content: center;
-            gap: 20px; /* Espaço entre os botões */
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            background-color: var(--azul-marinho);
-            color: white;
-            padding: 14px 30px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1.1em;
-            font-weight: 600;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 4px 10px rgba(0, 31, 63, 0.2); /* Sombra mais intensa para botões */
-        }
-
-        .btn:hover {
-            background-color: #003366; /* Um azul marinho um pouco mais escuro */
-            transform: translateY(-2px);
-        }
-
-        .form-section {
-            margin-top: 25px;
-            padding-top: 25px;
-            border-top: 1px solid var(--cinza-medio);
-            display: none; /* Escondido por padrão */
-            text-align: left;
-        }
-
-        .form-section h2 {
-            color: var(--azul-marinho);
-            font-size: 1.6em;
-            margin-bottom: 20px;
-            text-align: center;
-            font-weight: 600;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: var(--texto-escuro);
-        }
-
-        .form-group input[type="text"],
-        .form-group input[type="password"],
-        .form-group input[type="email"] {
-            width: calc(100% - 22px); /* Considerando padding e borda */
-            padding: 12px;
-            border: 1px solid var(--cinza-medio);
-            border-radius: 6px;
-            font-size: 1em;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .form-group input[type="text"]:focus,
-        .form-group input[type="password"]:focus,
-        .form-group input[type="email"]:focus {
-            border-color: var(--cor-primaria);
-            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
-            outline: none;
-        }
-
-        .submit-btn {
-            background-color: #28a745; /* Um verde atraente para ação positiva */
-            color: white;
-            padding: 14px 25px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1.1em;
-            font-weight: 600;
-            width: 100%;
-            margin-top: 15px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .submit-btn:hover {
-            background-color: #218838;
-            transform: translateY(-2px);
-        }
-
-        .role-selection {
-            margin-top: 20px;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .role-selection .btn {
-            background-color: #6c757d; /* Um cinza neutro para seleção de papel */
-            color: white;
-            padding: 12px 20px;
-            font-size: 1em;
-            box-shadow: none; /* Sem sombra para estes botões menores */
-        }
-
-        .role-selection .btn:hover {
-            background-color: #5a6268;
-            transform: translateY(-1px);
-        }
-    </style>
+    <title>My Architect_My Project - Conectando Sonhos</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="logo">
-            <img src="logo.png" alt="My Architect My Project Logo">
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">My Architect_My Project</a>
+            <nav class="main-nav">
+                <a href="#about">Sobre</a>
+                <a href="#services">Serviços</a>
+                <a href="#projects">Projetos</a>
+                <a href="#contact">Contato</a>
+            </nav>
         </div>
-        <h1>My Architect My Project</h1>
-        <div class="btn-group">
-            <button class="btn" onclick="showSection('loginSection')">Login</button>
-            <button class="btn" onclick="showSection('registerOptionsSection')">Cadastro</button>
-        </div>
+    </header>
 
-        <div id="loginSection" class="form-section">
-            <h2>Fazer Login</h2>
-            <form action="/login" method="POST"> <div class="form-group">
-                    <label for="loginEmail">Email ou Nome de Usuário:</label>
-                    <input type="text" id="loginEmail" name="loginEmail" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="loginPassword">Senha:</label>
-                    <input type="password" id="loginPassword" name="loginPassword" required>
-                </div>
-
-                <button type="submit" class="submit-btn">Entrar</button>
-            </form>
-        </div>
-
-        <div id="registerOptionsSection" class="form-section">
-            <h2>Escolha seu Perfil</h2>
-            <div class="role-selection">
-                <button class="btn" onclick="redirectToRegister('cliente')">Sou Cliente</button>
-                <button class="btn" onclick="redirectToRegister('arquiteto')">Sou Arquiteto</button>
+    <main class="hero-section">
+        <div class="container">
+            <h1>Sua Visão, Nossa Construção.</h1>
+            <p>Conectando Arquitetos, Engenheiros e Clientes para projetos excepcionais.</p>
+            <div class="button-group">
+                <a href="login.html" class="btn btn-primary">Login</a>
+                <a href="cadastro-tipo.html" class="btn btn-secondary">Cadastro</a>
             </div>
         </div>
-    </div>
+    </main>
 
-    <script>
-        function showSection(sectionId) {
-            // Esconde todas as seções de formulário
-            document.querySelectorAll('.form-section').forEach(section => {
-                section.style.display = 'none';
-            });
-            // Mostra a seção desejada
-            document.getElementById(sectionId).style.display = 'block';
-        }
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <p>No My Architect_My Project, acreditamos que todo grande projeto começa com uma conexão sólida. Somos a ponte entre os melhores profissionais da arquitetura e engenharia e clientes que buscam realizar seus sonhos. Nossa plataforma oferece ferramentas e modelos para profissionais, além de uma galeria inspiradora de projetos prontos para clientes.</p>
+        </div>
+    </section>
 
-        function redirectToRegister(role) {
-            // Redireciona para a página de cadastro, passando o tipo de usuário como parâmetro
-            window.location.href = 'cadastro.html?role=' + role;
-        }
+    <section id="services" class="section-padding bg-light">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <h3>Para Profissionais</h3>
+                    <ul>
+                        <li>Modelos de Projetos</li>
+                        <li>Ferramentas de Cálculos</li>
+                        <li>Gestão de Clientes</li>
+                        <li>Networking</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Para Clientes</h3>
+                    <ul>
+                        <li>Projetos Prontos</li>
+                        <li>Busca por Profissionais</li>
+                        <li>Acompanhamento de Obras</li>
+                        <li>Orçamentos Simplificados</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        // Opcional: mostrar a seção de login por padrão ao carregar a página
-        // document.addEventListener('DOMContentLoaded', () => {
-        //     showSection('loginSection');
-        // });
-    </script>
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <h2>Projetos em Destaque</h2>
+            <div class="project-grid">
+                <div class="project-item">
+                    <img src="https://via.placeholder.com/300x200?text=Projeto+Residencial" alt="Projeto Residencial">
+                    <h3>Casa Moderna</h3>
+                    <p>Um projeto residencial inovador e sustentável.</p>
+                </div>
+                <div class="project-item">
+                    <img src="https://via.placeholder.com/300x200?text=Projeto+Comercial" alt="Projeto Comercial">
+                    <h3>Escritório Colaborativo</h3>
+                    <p>Espaço comercial otimizado para produtividade.</p>
+                </div>
+                <div class="project-item">
+                    <img src="https://via.placeholder.com/300x200?text=Design+de+Interiores" alt="Design de Interiores">
+                    <h3>Interiores Elegantes</h3>
+                    <p>Ambientes internos que combinam funcionalidade e estilo.</p>
+                </div>
+            </div>
+            <a href="#" class="btn btn-secondary mt-30">Ver Mais Projetos</a>
+        </div>
+    </section>
+
+    <footer class="main-footer" id="contact">
+        <div class="container">
+            <div class="footer-info">
+                <h3>My Architect_My Project</h3>
+                <p>Avenida Arapongas n 150 - Centro</p>
+                <p>Arapongas-PR, CEP 86700-100</p>
+                <p>Email: contato@myarchitectmyproject.com</p>
+                <p>Telefone: (43) 98765-4321</p>
+            </div>
+            <div class="footer-links">
+                <h3>Links Úteis</h3>
+                <ul>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="privacy.html">Política de Privacidade</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 My Architect_My Project. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
